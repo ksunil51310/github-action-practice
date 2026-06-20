@@ -1,0 +1,29 @@
+name: practice CI CD Pipeline
+on: 
+ workflow_dispatch:
+jobs:
+    code:
+     runs-on: ubuntu-latest
+     steps:
+         - name: pull code from guthub  
+           run: echo "cloning the code"
+
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: build the code 
+          run: "Building code."        
+
+    test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: testing code
+          run: "Test code."       
+    
+
+    deploy:
+     runs-on: ubuntu-latest
+     steps:
+       - name: deploying the code 
+         run: echo "Deployment completed ."
+   
