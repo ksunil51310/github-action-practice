@@ -10,13 +10,13 @@ jobs:
  build:
       runs-on: ubuntu-latest
       steps:
-        - name: build the code 
-          run: "Build the app"        
+        - name: building the code 
+          run: "build the app"        
  test:
       runs-on: ubuntu-latest
       steps:
         - name: testing code
-          run: "Test application"       
+          run: "test application"       
     
 
  deploy:
