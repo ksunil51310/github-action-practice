@@ -12,18 +12,18 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: build the code 
-          run: "Building code."        
+          run: "Build the app"        
 
     test:
       runs-on: ubuntu-latest
       steps:
         - name: testing code
-          run: "Test code."       
+          run: "Test application"       
     
 
     deploy:
      runs-on: ubuntu-latest
      steps:
        - name: deploying the code 
-         run: echo "Deployment completed ."
+         run: echo "Deployment completed"
    
