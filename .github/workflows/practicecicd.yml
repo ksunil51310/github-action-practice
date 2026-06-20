@@ -5,18 +5,20 @@ jobs:
  code:
      runs-on: ubuntu-latest
      steps:
-         - name: pull code from guthub  
-           run: echo "cloning the code"
+        - name: pull code from guthub
+          run: echo "cloning the code"
+          
  build:
-      runs-on: ubuntu-latest
-      steps:
-        - name: building the code 
-          run: echo "build the app"        
+     runs-on: ubuntu-latest
+     steps:
+       - name: building the code 
+         run: echo "build the app"
+         
  test:
-      runs-on: ubuntu-latest
-      steps:
-        - name: testing code
-          run: echo "test application"       
+     runs-on: ubuntu-latest
+     steps:
+       - name: testing code
+         run: echo "test application"       
     
 
  deploy:
