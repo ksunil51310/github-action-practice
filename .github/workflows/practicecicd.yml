@@ -1,20 +1,23 @@
-name: practice CI CD Pipeline
+name: Practice CI CD Pipeline
 on: 
  workflow_dispatch:
 jobs:
  code:
+     name: "Checkout the code from central Repository."
      runs-on: ubuntu-latest
      steps:
         - name: pull code from guthub
           run: echo "cloning the code"
           
  build:
+     needs: [code]
      runs-on: ubuntu-latest
      steps:
        - name: building the code 
          run: echo "build the app"
          
  test:
+     needs: [build]
      runs-on: ubuntu-latest
      steps:
        - name: testing code
@@ -22,6 +25,7 @@ jobs:
     
 
  deploy:
+     needs: [build,test]
      runs-on: ubuntu-latest
      steps:
        - name: deploying the code 
